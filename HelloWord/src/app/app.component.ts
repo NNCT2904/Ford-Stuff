@@ -7,4 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'HelloWord';
+  supervisor = "Mukesh";
+  message = "this one should be okay.";
 }
