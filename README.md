@@ -8,3 +8,5 @@ Tasks:
 2. Add
 3. Commit -m
 4. Push
+
+Use Google and StackOverf
