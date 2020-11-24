@@ -1,12 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-</head>
-<body>
+<div>
+  <h1>Angular Form</h1>
   <div>
-    <H1>Hello World!</H1>
-    <p>Hey {{ supervisor }}, {{ message }}</p>
+    <form>
+      <input #box type='text'/>
+      <button (click)="handleAdd($event, box.value)">Submit</button>
+    </form>
   </div>
-</body>
-</html>
+</div>
