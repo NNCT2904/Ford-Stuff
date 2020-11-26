@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { ItemComponent } from '../item/item.component';
+import { Component, Input, OnInit } from '@angular/core';
+import { Item, ItemComponent } from '../item/item.component';
 
 @Component({
   selector: 'app-items',
@@ -7,17 +7,22 @@ import { ItemComponent } from '../item/item.component';
   styleUrls: ['./items.component.css']
 })
 export class ItemsComponent implements OnInit {
-  _listItems: ItemComponent[];
+  @Input() inputList!: Item[];
+
+  _listItems: Item[];
   constructor() {
     this._listItems = [];
   }
 
-  loadData(listItem:ItemComponent[]) {
+  loadData(listItem: Item[]) {
     this._listItems = listItem;
   }
 
-  ngOnInit(): void {
+  ngDoCheck(): void {
+    this._listItems = this.inputList;
+  }
 
+  ngOnInit(): void {
   }
 
 }

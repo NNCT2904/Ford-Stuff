@@ -1,6 +1,6 @@
 import { analyzeFileForInjectables, jsDocComment } from '@angular/compiler';
 import { Component } from '@angular/core';
-import { ItemComponent } from './item/item.component';
+import { Item, ItemComponent } from './item/item.component';
 
 @Component({
   selector: 'app-root',
@@ -9,7 +9,7 @@ import { ItemComponent } from './item/item.component';
 })
 
 export class AppComponent {
-  listItem: ItemComponent[];
+  listItem: Item[];
   constructor() {
     this.listItem = [];
   }
@@ -42,7 +42,7 @@ export class AppComponent {
 
     console.log("Submitted " + input);
     
-    let item = new ItemComponent();
+    let item = new Item();
     item.title = input;
     this.listItem = this.listItem.concat(item);
     
