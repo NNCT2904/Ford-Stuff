@@ -1,4 +1,10 @@
-<div>
-    {{item.title}}
-    <button (click)="handleDeleteItem(item)">Remove</button>
+<div class="row d-flex pt-3">
+    <div class="col-12 col-md-10">
+        {{item.title}}
+    </div>
+    <div class="col-12 col-md-2 ml-auto">
+        <button (click)="handleDeleteItem(item)" type="button" class="btn btn-outline-danger ml-auto">Remove</button>
+    </div>
 </div>
+    
+    
