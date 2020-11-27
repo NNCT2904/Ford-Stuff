@@ -1,11 +1,14 @@
 <div>
   <h1>Angular Form</h1>
   <div>
+    <div>
+      
+    </div>
     <form>
       <input #box type='text'/>
       <button (click)="handleAdd($event, box.value)">Submit</button>
       <button (click)="handelDeleteAll()">RemoveAll</button>
     </form>
-    <app-items [inputList]="listItem"></app-items>
+    <app-items [inputList]="listItem" (deleteItemFromList)="handleDeleteItem($event)"></app-items>
   </div>
 </div>
