@@ -1,12 +1,35 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-</head>
-<body>
-  <div>
-    <H1>Hello World!</H1>
-    <p>Hey {{ supervisor }}, {{ message }}</p>
+<div>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a href="#" class="navbar-brand tect-light">Angular Form</a>
+  </nav>
+
+
+  <div class="container pt-3">
+    <div class="col align-self-center pt-3">
+      <form class="form-group">
+        <div class="row">
+          <div class="col-12 col-md-10">
+            <input #box type='text' class="form-control" />
+          </div>
+          <div class="col-12 col-md-2 d-flex">
+            <button (click)="handleAdd($event, box.value)" type="button" class="btn btn-primary ml-auto">Submit</button>
+          </div>
+        </div>
+      </form>
+
+      <app-items [inputList]="listItem" (deleteItemFromList)="handleDeleteItem($event)"></app-items>
+    </div>
+
+    <div class="row pt-3">
+      <div class="col text-center">
+        <button (click)="handelDeleteAll()" type="button" class="btn btn-danger">Remove All</button>
+      </div>
+    </div>
+
+    <div class="row pt-3">
+      <iframe width="auto" height="auto" src="https://www.youtube.com/embed/RSA8vwrfIPo" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+    </div>
   </div>
-</body>
-</html>
+</div>
